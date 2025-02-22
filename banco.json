@@ -16,5 +16,14 @@
             "idade": 33
         }
     ],
-    "produtos": []
+    "produtos": [
+        {
+            "produto": "pano",
+            "preco": 45.0
+        },
+        {
+            "produto": "panel",
+            "preco": 44.0
+        }
+    ]
 }

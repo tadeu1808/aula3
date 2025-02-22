@@ -1,5 +1,6 @@
 #main
 from sistema.app.controllers.clienteController import clienteController
+from sistema.app.controllers.produtoController import produtoController
 
 def exibir_menu():
     
@@ -12,6 +13,8 @@ def exibir_menu():
     
 def main():
     cntrlCliente = clienteController()
+    cntrlProduto = produtoController()
+    
     while True:
         exibir_menu()    
         opc = input ("Escolha uma opção: ")
@@ -29,11 +32,15 @@ def main():
                 print(f"{index}. {cliente}")            
             
         elif opc == "3":
-            nome = input("Nome do produto:")
+            produto = input("Nome do produto:")
             preco = float(input("Preço:"))
+            cntrlProduto.criar_produto(produto, preco)
             
         elif opc == "4":
-            print("listar")
+            produtos = cntrlProduto.listar_produtos()
+            for index, produto in enumerate(produtos, 1):
+                #index é a posição do cliente listado
+                print(f"{index}. {produto}")
             
         elif opc == "0":
             print("Saindo do sistema...")    

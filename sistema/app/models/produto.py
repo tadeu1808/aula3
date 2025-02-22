@@ -1,9 +1,9 @@
 class Produto:
     
-        def __init__(self, nome, preco):
-            self.nome = nome
+        def __init__(self, produto, preco):
+            self.produto = produto
             self.preco = preco
         
         def __str__(self):
-            return f"Produto(nome={self.nome}, prreco={self.preço})"            
+            return f"Produto(nome={self.produto}, preco={self.preco})"            
         

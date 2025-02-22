@@ -31,8 +31,15 @@ class BancoFake:
         self.dados["clientes"].append(cliente_dict)
         self._salvar()
         
+    def adicionar_produto(self, dict_produto):
+        self.dados["produtos"].append(dict_produto)
+        self._salvar()    
+        
     def listar_clientes(self):
         return self.dados["clientes"]
+    
+    def listar_produtos(self):
+        return self.dados["produtos"]
     
     
         
